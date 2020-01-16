@@ -1,3 +1,6 @@
+![SculptUI Logo](/images/sculpt-logo.png)
+![VSCode Logo](/images/vscode-icon.png)
+
 # SculptUI VS Code Extension
 
 SculptUI allows visually editing component-based JavaScript/TypeScript code. The SculptUI VS Code Extension allows to easily start your application and select any component to jump right to the code section it is defined in [VS Code](https://code.visualstudio.com/).
