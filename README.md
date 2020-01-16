@@ -1,5 +1,7 @@
-![SculptUI Logo](/images/sculpt-logo.png)
-![VSCode Logo](/images/vscode-icon.png)
+<div style="display: flex; justify-content: center; align-items: center;">
+  <img src="images/sculpt-logo.svg" alt="SculptUI Logo" width="128"/>
+  <img src="images/vscode-icon.svg" alt="VS Code Logo" width="96"/>
+</div>
 
 # SculptUI VS Code Extension
 
@@ -23,3 +25,4 @@ Once the extension is installed, press Ctrl/Cmd + Shift + P to display the edito
 When you have a folder open containing a CRA project just use the "SculptUI - Start" command which will run your app in a dev server. A browser should be opened running your app.
 
 Now you can enjoy the magic, just click on any component in the browser to select the matching code right inside your VSCode editor. 
+
