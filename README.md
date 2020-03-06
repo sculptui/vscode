@@ -3,7 +3,7 @@
 
 # SculptUI - VS Code Extension
 
-_"Now where in the code is that element shown in the browser?"_
+_"Where was that element shown in my code?"_
 
 This VS Code extension let's you jump right to the relevant source code lines for a React element by clicking it in your browser.
 
@@ -65,11 +65,9 @@ ___
 
   - *Building in wrong folder*: By default SculptUI will start the web application in the root folder. If your application is in a subfolder you need to set the extension setting "sculpt-ui.folderForStarting" (see [Extension Settings](#extension-settings)) in your workspace.
 
-  - *Error due to different node version*: The version of nodejs used by VS Code extensions might not match what your web application needs to build/run. Sorry, we don't have a solution for this yet, but are working hard on providing an option to support these cases soon.
-
   - *Application requires specific port*: Sometimes applications, API or firewalls are configured to only work on a specific port. You can change the port used by SculptUI (by default 5000) to what you need (i.e. 3000) in the [Extension Settings](#extension-settings).
 
-  - *Still not compiling*: Check the output for "sculptUI - dev server", where you will usually find any compilation or other errors. Also make sure your app builds correctly without SculptUI (running "npm start" or "yarn start" in the terminal).
+  - *Still not compiling*: Check the terminal window "SculptUI", where you will usually find any compilation or other errors. Also make sure your app builds correctly without SculptUI (running "npm start" or "yarn start" in the terminal).
 
 ## Issues & Feature Requests
 
