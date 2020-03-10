@@ -77,8 +77,8 @@ ___
 
 ## Release Notes
 
-### 0.1.0
+### 0.2.0
 
-Initial release of SculptUI VS Code Extension
+Initial public release of SculptUI VS Code Extension
 
 **Enjoy!**
