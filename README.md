@@ -3,7 +3,7 @@
 
 # SculptUI - VS Code Extension
 
-_"Where was that element shown in my code?"_
+_"Where is that element on the page in my code?"_
 
 This VS Code extension let's you jump right to the relevant source code lines for a React element by clicking it in your browser.
 
@@ -12,9 +12,10 @@ This VS Code extension let's you jump right to the relevant source code lines fo
 Run your application and select any component to jump right into the code section where it is defined inside the [VS Code](https://code.visualstudio.com/) editor.
 
 <!-- TODO: Gif showing selection of element. -->
-<img src="images/SculptUI-vscode-preview.gif" width="810" height="540" alt="">
+<img src="images/SculptUI-vscode-demo.gif" width="864" height="540" alt="">
 
-That's just the start. We are working hard on more features which you can look forward to:
+This is just the start. We aim to revolutionize software development to help you create and extend software in a way that feels natural.
+We are working hard on more features which you can look forward to:
 
 - Styling directly in your runtime view (supporting [styled-components](https://styled-components.com/), [Material-UI styles](https://material-ui.com/styles/basics/), [CSS/SCSS modules](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet), in-line styles, etc.)
 - Full WYSWYG component editing - like inserting and moving around components using drag-and-drop, extracting component parts to a new component
@@ -34,7 +35,7 @@ That's just the start. We are working hard on more features which you can look f
 
 ## Status
 
-At the moment this is very experimental and only React components are supported on projects based on [Create React App](https://create-react-app.dev/) (unejected or using [react-app-rewired](https://github.com/timarney/react-app-rewired)). But keep updated because we're fixing and extending fast. Please help us make this perfect for the way you work by sending us your feedbacks, issues and feature requests to our [issues list](https://github.com/sculptui/vscode/issues).
+At the moment this is experimental and only React components are supported on projects based on [Create React App](https://create-react-app.dev/) (unejected or using [react-app-rewired](https://github.com/timarney/react-app-rewired)). But keep updated because we're fixing and extending fast. Please help us make this perfect for the way you work by sending us your feedbacks, issues and feature requests to our [issues list](https://github.com/sculptui/vscode/issues).
 
 ## Requirements
 
@@ -48,34 +49,39 @@ At the moment this is very experimental and only React components are supported 
 The following can be configured in the extensions settings:
 
 - `sculpt-ui.folderForStarting`: Set a specific sub folder to start sculpt in. This folder should be configured to your React client application if this is not in your root folder.Use relative path (i.e. '\\client').
-- `sculpt-ui.port`: Override the port(s) sculpt server listens on. By default the port range is '5055-5100'. Format can be either '9999' for a single port or '9000-9099' for a port range where the first available port is retrieved.
+- `sculpt-ui.port`: Override the port(s) sculpt server listens on. If nothing set the usual port for the development server (normally 3000) is used. Format can be either '9999' for a single port or '9000-9099' for a port range where the first available port is retrieved.
 - `sculpt-ui.https`: Set to run the sculpt server in https mode. Only needed if the default configuration needs to be explicitly overriden.
 
-___
+---
 
 ## Troubleshooting
 
-  ### SculptUI not showing in the status bar
-  
-  - On activation SculptUI will check for [react-scripts](https://github.com/facebook/create-react-app/tree/master/packages/react-scripts) and the required version (see [Requirements](#requirements)). If one of the requirements are not matched the SculptUI status bar will not be shown. You could try running SculptUI using the extensions commands (press Ctrl/Cmd + Shift + P to display the editor’s command palette, and then type SculptUI to see the list of the available commands). But most probably the requirements are not met and SculptUI can not be used on your project.
+### SculptUI not showing in the status bar
 
-  - Make sure the react-scripts is in the ./node_modules folder and is version 2.0 or higher. Have you run "npm install" or "yarn install" already?
+- On activation SculptUI will check for [react-scripts](https://github.com/facebook/create-react-app/tree/master/packages/react-scripts) and the required version (see [Requirements](#requirements)). If one of the requirements are not matched the SculptUI status bar will not be shown. You could try running SculptUI using the extensions commands (press Ctrl/Cmd + Shift + P to display the editor’s command palette, and then type SculptUI to see the list of the available commands). But most probably the requirements are not met and SculptUI can not be used on your project.
 
-  ### Possible errors when running
+- Make sure the react-scripts is in the ./node_modules folder and is version 2.0 or higher. Have you run "npm install" or "yarn install" already?
 
-  - *Building in wrong folder*: By default SculptUI will start the web application in the root folder. If your application is in a subfolder you need to set the extension setting "sculpt-ui.folderForStarting" (see [Extension Settings](#extension-settings)) in your workspace.
+### Possible errors when running
 
-  - *Application requires specific port*: Sometimes applications, API or firewalls are configured to only work on a specific port. You can change the port used by SculptUI (by default 5000) to what you need (i.e. 3000) in the [Extension Settings](#extension-settings).
+- _Building in wrong folder_: By default SculptUI will start the web application in the root folder. If your application is in a subfolder you need to set the extension setting "sculpt-ui.folderForStarting" (see [Extension Settings](#extension-settings)) in your workspace.
 
-  - *Still not compiling*: Check the terminal window "SculptUI", where you will usually find any compilation or other errors. Also make sure your app builds correctly without SculptUI (running "npm start" or "yarn start" in the terminal).
+- _Application requires specific port_: Sometimes applications, API or firewalls are configured to only work on a specific port. You can change the port used by SculptUI (by default 3000) to what you need in the [Extension Settings](#extension-settings).
+
+- _Still not compiling_: Check the terminal window "SculptUI", where you will usually find any compilation or other errors. Also make sure your app builds correctly without SculptUI (running "npm start" or "yarn start" in the terminal).
 
 ## Issues & Feature Requests
 
 If you have any feedbacks, issues or feature requests please post them on our [issues list](https://github.com/sculptui/vscode/issues).
 
-___
+---
 
 ## Release Notes
+
+### 0.2.1
+
+- shows feedback notification at bottom right when element has been selected successfully in IDE
+- fix: overriding port and https in extensions settings now works correctly
 
 ### 0.2.0
 
