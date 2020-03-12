@@ -12,7 +12,7 @@ This VS Code extension let's you jump right to the relevant source code lines fo
 Run your application and select any component to jump right into the code section where it is defined inside the [VS Code](https://code.visualstudio.com/) editor.
 
 <!-- TODO: Gif showing selection of element. -->
-<img src="images/SculptUI-vscode-demo.gif" width="864" height="540" alt="">
+<img src="images/SculptUI-vscode-demo.gif" width="100%" alt="SculptUI VS Code Demo">
 
 This is just the start. We aim to revolutionize software development to help you create and extend software in a way that feels natural.
 We are working hard on more features which you can look forward to:
