@@ -48,7 +48,7 @@ At the moment this is experimental and only React components are supported on pr
 
 The following can be configured in the extensions settings:
 
-- `sculpt-ui.folderForStarting`: Set a specific sub folder to start sculpt in. This folder should be configured to your React client application if this is not in your root folder.Use relative path (i.e. '\\client').
+- `sculpt-ui.folderForStarting`: Set a specific sub folder to start sculpt in. This folder should be configured to your React client application if this is not in your root folder. Use relative path (i.e. 'client').
 - `sculpt-ui.port`: Override the port(s) sculpt server listens on. If nothing set the usual port for the development server (normally 3000) is used. Format can be either '9999' for a single port or '9000-9099' for a port range where the first available port is retrieved.
 - `sculpt-ui.https`: Set to run the sculpt server in https mode. Only needed if the default configuration needs to be explicitly overriden.
 
@@ -58,13 +58,13 @@ The following can be configured in the extensions settings:
 
 ### SculptUI not showing in the status bar
 
-- On activation SculptUI will check for [react-scripts](https://github.com/facebook/create-react-app/tree/master/packages/react-scripts) and the required version (see [Requirements](#requirements)). If one of the requirements are not matched the SculptUI status bar will not be shown. You could try running SculptUI using the extensions commands (press Ctrl/Cmd + Shift + P to display the editor’s command palette, and then type SculptUI to see the list of the available commands). But most probably the requirements are not met and SculptUI can not be used on your project.
-
 - Make sure the react-scripts is in the ./node_modules folder and is version 2.0 or higher. Have you run "npm install" or "yarn install" already?
+
+- On activation SculptUI will check for [react-scripts](https://github.com/facebook/create-react-app/tree/master/packages/react-scripts) and the required version (see [Requirements](#requirements)). If one of the requirements are not matched the SculptUI status bar will not be shown. You could try running SculptUI using the extensions commands (press Ctrl/Cmd + Shift + P to display the editor’s command palette, and then type SculptUI to see the list of the available commands). But most probably the requirements are not met and SculptUI can not be used on your project.
 
 ### Possible errors when running
 
-- _Building in wrong folder_: By default SculptUI will start the web application in the root folder. If your application is in a subfolder you need to set the extension setting "sculpt-ui.folderForStarting" (see [Extension Settings](#extension-settings)) in your workspace.
+- _Building in wrong folder_: By default SculptUI will start the web application in the root folder if it contains react-scripts. Otherwise all subfolders downto 3 levels are checked. If multiple folders match requirements, you should be able to pick which one. You can also set the subfolder you want in the extension setting "sculpt-ui.folderForStarting" (see [Extension Settings](#extension-settings)) of your workspace.
 
 - _Application requires specific port_: Sometimes applications, API or firewalls are configured to only work on a specific port. You can change the port used by SculptUI (by default 3000) to what you need in the [Extension Settings](#extension-settings).
 
@@ -78,13 +78,34 @@ If you have any feedbacks, issues or feature requests please post them on our [i
 
 ## Release Notes
 
-### 0.2.1
+## [0.3.0] - 2020-03-25
+
+### Added
+
+- automatic detection of subfolders containing react-scripts
+- user selection when multiple react-scripts subfolders found
+- option to save default for project folder on first run
+
+### Changed
+
+- IMPORTANT fix: now config-overrides when using react-app-rewired are correctly applied
+- fix: proxy setting (in package.json) is now supported
+- errors occuring in dev server are logged and shown to user
+
+## [0.2.1] - 2020-03-12
+
+### Added
 
 - shows feedback notification at bottom right when element has been selected successfully in IDE
+
+### Changed
+
 - fix: overriding port and https in extensions settings now works correctly
 
-### 0.2.0
+## [0.2.0] - 2020-03-06
 
 Initial public release of SculptUI VS Code Extension
+
+---
 
 **Enjoy!**
