@@ -78,6 +78,13 @@ If you have any feedbacks, issues or feature requests please post them on our [i
 
 ## Release Notes
 
+## [0.3.1] - 2020-03-31
+
+### Added
+
+- Automatic reconnect to IDE when stopped and restarted
+- Badge on controller button showing when connecting or error trying to connect to IDE or SculptUI dev server
+
 ## [0.3.0] - 2020-03-25
 
 ### Added
