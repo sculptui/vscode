@@ -35,14 +35,16 @@ We are working hard on more features which you can look forward to:
 
 ## Status
 
-At the moment this is experimental and only React components are supported on projects based on [Create React App](https://create-react-app.dev/) (unejected or using [react-app-rewired](https://github.com/timarney/react-app-rewired)). But keep updated because we're fixing and extending fast. Please help us make this perfect for the way you work by sending us your feedbacks, issues and feature requests to our [issues list](https://github.com/sculptui/vscode/issues).
+At the moment this is experimental and only React components are supported on projects based on [Create React App](https://create-react-app.dev/) (unejected or using [react-app-rewired](https://github.com/timarney/react-app-rewired) or [craco](https://github.com/gsoft-inc/craco/)) or [Next.js](https://nextjs.org/). But keep updated because we're fixing and extending fast. Please help us make this perfect for the way you work by sending us your feedbacks, issues and feature requests to our [issues list](https://github.com/sculptui/vscode/issues).
 
 ## Requirements
 
 - Visual Studio Code Version 1.35 and higher
-- Project using [react-scripts](https://github.com/facebook/create-react-app/tree/master/packages/react-scripts) (version 2.0 and above) from [Create React App](https://github.com/facebook/create-react-app/)
-  - works with [react-app-rewired](https://github.com/timarney/react-app-rewired)
-  - doesn't work when react-scripts has been ejected
+- Project using:
+  - [react-scripts](https://github.com/facebook/create-react-app/tree/master/packages/react-scripts) (version 2.0 and above) from [Create React App](https://github.com/facebook/create-react-app/)
+  - config overrides with [react-app-rewired](https://github.com/timarney/react-app-rewired) or [craco](https://github.com/gsoft-inc/craco/)
+  - [Next.js](https://nextjs.org/)
+- doesn't work when react-scripts has been ejected
 
 ## Extension Settings
 
@@ -58,9 +60,9 @@ The following can be configured in the extensions settings:
 
 ### SculptUI not showing in the status bar
 
-- Make sure the react-scripts is in the ./node_modules folder and is version 2.0 or higher. Have you run "npm install" or "yarn install" already?
+- Are the required npm modules (i.e. react-scripts or next) in the ./node_modules folder. Have you run "npm install" or "yarn install" already?
 
-- On activation SculptUI will check for [react-scripts](https://github.com/facebook/create-react-app/tree/master/packages/react-scripts) and the required version (see [Requirements](#requirements)). If one of the requirements are not matched the SculptUI status bar will not be shown. You could try running SculptUI using the extensions commands (press Ctrl/Cmd + Shift + P to display the editor’s command palette, and then type SculptUI to see the list of the available commands). But most probably the requirements are not met and SculptUI can not be used on your project.
+- On activation SculptUI will check for [react-scripts](https://github.com/facebook/create-react-app/tree/master/packages/react-scripts) and the required version (see [Requirements](#requirements)) or [Next.js](https://nextjs.org/). If one of the requirements are not matched the SculptUI status bar will not be shown. You could try running SculptUI using the extensions commands (press Ctrl/Cmd + Shift + P to display the editor’s command palette, and then type SculptUI to see the list of the available commands). But most probably the requirements are not met and SculptUI can not be used on your project.
 
 ### Possible errors when running
 
@@ -77,6 +79,28 @@ If you have any feedbacks, issues or feature requests please post them on our [i
 ---
 
 ## Release Notes
+
+## [0.4.0] - 2020-05-25
+
+### Added
+
+- Support for projects using [Next.js](https://nextjs.org/)
+- Support for projects using [craco](https://github.com/gsoft-inc/craco/) for overriding react-scripts
+- Controller keeps active or inactive even after refreshing the browser tab
+- Selected element stays selected even after refreshing the browser window or refresh due to hot module reload
+- Detection of config overriding library used (i.e. react-app-rewired or craco)
+- Secured vscode extension access using random id in Url
+- Show in status bar when client(s) connected
+- Retries to reconnect to devserver when controller is active
+
+### Changed
+
+- Improved and more efficient injection of sculpt client in html page using HtmlWebpackPlugin
+
+### Fixed
+
+- Bug: Sculpt injects div using space in host page causing layout changes (i.e. scroll bars)
+- Bug: Elements with high z-index could be unselectable in SculptUI
 
 ## [0.3.1] - 2020-03-31
 
