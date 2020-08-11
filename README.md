@@ -28,10 +28,14 @@ We are working hard on more features which you can look forward to:
   Install the extension by clicking on the Extensions icon in the Activity Bar on the side of VS Code, searching for "SculptUI" and then pressing the "Install" button.
 
 - `Press the "Start SculptUI" button in the status bar`<br/>
-  When you have a folder open containing a CRA project just use the "Start SculptUI" button shown at the bottom in the status bar of VS Code. Your web application is compiled, dev server started and the browser opened running your app.
+  When you have a folder open containing a CRA or NextJs project just use the "Start SculptUI" button shown at the bottom in the status bar of VS Code. Your web application is compiled, dev server started and the browser opened running your app.
 
 - `Click element in the browser to jump to code line`<br/>
   Now you can enjoy the magic, just click on any component in the browser to select the matching code right inside your VSCode editor.
+
+## Custom Setup
+
+If you are using custom scripts or a custom server with NextJs check out [Custom Setup](docs/custom-setup.md)
 
 ## Status
 
@@ -79,6 +83,29 @@ If you have any feedbacks, issues or feature requests please post them on our [i
 ---
 
 ## Release Notes
+
+## [0.4.1] - 2020-08-06
+
+### Added
+
+- support setting custom sculpt scripts in package.json (will be run if available)
+- show element type next to element name in hover info (if different)
+- Nextjs support: now reuses nextjs config if found
+- Introduced devserver-middleware (injects sculpt client in html)
+- Ignores yarn workspaces root for starting sculpt, unless sculpt explicitely configured in root package.json
+
+### Changed
+
+- ensure Controller is above all elements on page
+- trim filepath in hoverinfo when too long (>60 chars)
+- vscode extension: only showing relative folder for selecting project
+- hover tooltip on controller not shown while moving/clicking
+- SculptWebpackPlugin shows error if Babel loader is not available
+- added "dontInjectScript" parameter to SculptWebpackPlugin
+
+### Fixes
+
+- fixed click on controller not working when browser not focused first
 
 ## [0.4.0] - 2020-05-25
 
