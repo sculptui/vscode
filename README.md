@@ -3,24 +3,36 @@
 
 # SculptUI - VS Code Extension
 
-_"Where is that element on the page in my code?"_
+_"Sculpt your UI code visually"_
 
-This VS Code extension let's you jump right to the relevant source code lines for a React element by clicking it in your browser.
+This VS Code extension integrates a visual UI builder seamlessly into your code editing
+experience.
+
+Style your React elements in the application running in your browser and let sculpt
+write the code for you. And when you need to edit something in your code, just click the element
+and jump right to the relevant spot in your VSCode editor.
+
+This is only the beginning of a revolutionary, more efficient, more natural way of building
+frontend code. Sculpt the future of frontend development with us.
 
 ## Features
 
-Run your application and select any component to jump right into the code section where it is defined inside the [VS Code](https://code.visualstudio.com/) editor.
+Run your application and select any component to jump right into the code section where it is defined inside your [VS Code](https://code.visualstudio.com/) editor.
 
 <!-- TODO: Gif showing selection of element. -->
 <img src="images/SculptUI-vscode-demo.gif" width="100%" alt="SculptUI VS Code Demo">
 
-This is just the start. We aim to revolutionize software development to help you create and extend software in a way that feels natural.
-We are working hard on more features which you can look forward to:
+Use SculptUI's styles editor to change inline style attributes or select (or even create) style class names from sass, scss and less (modules) files and edit the styles there. See the results in your UI while the code is written for you.
 
-- Styling directly in your runtime view (supporting [styled-components](https://styled-components.com/), [Material-UI styles](https://material-ui.com/styles/basics/), [CSS/SCSS modules](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet), in-line styles, etc.)
+### More to come
+
+This is just the start. We are working hard on more features which you can look forward to:
+
+- Even more styling options (supporting [styled-components](https://styled-components.com/), [Material-UI styles](https://material-ui.com/styles/basics/), etc.)
 - Full WYSWYG component editing - like inserting and moving around components using drag-and-drop, extracting component parts to a new component
-- Pluggable custom property editors for component libraries
-- Support for more UI frameworks and libraries (i.e. [Angular](https://angular.io/), [Vue](https://vuejs.org/), Web Components and more)
+- Generic and pluggable custom property editors for component libraries
+- Configurable integrated component galleries, style guides and design systems
+- Support for other UI frameworks and libraries (i.e. [Angular](https://angular.io/), [Vue](https://vuejs.org/), Web Components and more)
 
 ## Getting started
 
@@ -84,85 +96,7 @@ If you have any feedbacks, issues or feature requests please post them on our [i
 
 ## Release Notes
 
-## [0.4.1] - 2020-08-06
-
-### Added
-
-- support setting custom sculpt scripts in package.json (will be run if available)
-- show element type next to element name in hover info (if different)
-- Nextjs support: now reuses nextjs config if found
-- Introduced devserver-middleware (injects sculpt client in html)
-- Ignores yarn workspaces root for starting sculpt, unless sculpt explicitely configured in root package.json
-
-### Changed
-
-- ensure Controller is above all elements on page
-- trim filepath in hoverinfo when too long (>60 chars)
-- vscode extension: only showing relative folder for selecting project
-- hover tooltip on controller not shown while moving/clicking
-- SculptWebpackPlugin shows error if Babel loader is not available
-- added "dontInjectScript" parameter to SculptWebpackPlugin
-
-### Fixes
-
-- fixed click on controller not working when browser not focused first
-
-## [0.4.0] - 2020-05-25
-
-### Added
-
-- Support for projects using [Next.js](https://nextjs.org/)
-- Support for projects using [craco](https://github.com/gsoft-inc/craco/) for overriding react-scripts
-- Controller keeps active or inactive even after refreshing the browser tab
-- Selected element stays selected even after refreshing the browser window or refresh due to hot module reload
-- Detection of config overriding library used (i.e. react-app-rewired or craco)
-- Secured vscode extension access using random id in Url
-- Show in status bar when client(s) connected
-- Retries to reconnect to devserver when controller is active
-
-### Changed
-
-- Improved and more efficient injection of sculpt client in html page using HtmlWebpackPlugin
-
-### Fixed
-
-- Bug: Sculpt injects div using space in host page causing layout changes (i.e. scroll bars)
-- Bug: Elements with high z-index could be unselectable in SculptUI
-
-## [0.3.1] - 2020-03-31
-
-### Added
-
-- Automatic reconnect to IDE when stopped and restarted
-- Badge on controller button showing when connecting or error trying to connect to IDE or SculptUI dev server
-
-## [0.3.0] - 2020-03-25
-
-### Added
-
-- automatic detection of subfolders containing react-scripts
-- user selection when multiple react-scripts subfolders found
-- option to save default for project folder on first run
-
-### Changed
-
-- IMPORTANT fix: now config-overrides when using react-app-rewired are correctly applied
-- fix: proxy setting (in package.json) is now supported
-- errors occuring in dev server are logged and shown to user
-
-## [0.2.1] - 2020-03-12
-
-### Added
-
-- shows feedback notification at bottom right when element has been selected successfully in IDE
-
-### Changed
-
-- fix: overriding port and https in extensions settings now works correctly
-
-## [0.2.0] - 2020-03-06
-
-Initial public release of SculptUI VS Code Extension
+Checkout all changes in the [change log](CHANGELOG.md).
 
 ---
 

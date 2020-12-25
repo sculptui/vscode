@@ -10,7 +10,7 @@ If you can't find a way to get your setup to work add an issue in our [issues li
 
 ## Custom Script
 
-If you are using custom scripts to start your application in development (i.e. to also start a server), configure the needed commands in your package.json similar to the "start" script. Sculpt UI will use this script to run.
+If you are using custom scripts to start your application in development (i.e. to also start a server), configure the needed commands in your package.json similar to the "start" script. SculptUI will use this script to run.
 
 Just add your script to the scripts/sculpt in your [package.json](https://docs.npmjs.com/creating-a-package-json-file).
 
