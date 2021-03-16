@@ -3,36 +3,45 @@
 
 # SculptUI - VS Code Extension
 
-_"Sculpt your UI code visually"_
+_"Sculpt your front-end code visually"_
 
-This VS Code extension integrates a visual UI builder seamlessly into your code editing
+This VS Code extension integrates a visual runtime UI builder seamlessly into your existing code editing
 experience.
 
-Style your React elements in the application running in your browser and let sculpt
-write the code for you. And when you need to edit something in your code, just click the element
-and jump right to the relevant spot in your VSCode editor.
+Style your React elements in the running web application and let sculpt
+write the code for you. Or just add or change the property of a React element inside your browser,
+and it will update the code.
+
+And when you want to edit something in the source code yourself, select the element
+in the browser and Sculpt will bring you right to the relevant spot in your VSCode editor.
 
 This is only the beginning of a revolutionary, more efficient, more natural way of building
-frontend code. Sculpt the future of frontend development with us.
+web applications. Sculpt the future of front-end development with us.
 
 ## Features
 
-Run your application and select any component to jump right into the code section where it is defined inside your [VS Code](https://code.visualstudio.com/) editor.
+Run your application and select any component during runtime in the browser. The source code where it is defined will be selected inside your
+[VS Code](https://code.visualstudio.com/) editor.
 
 <!-- TODO: Gif showing selection of element. -->
 <img src="images/SculptUI-vscode-demo.gif" width="100%" alt="SculptUI VS Code Demo">
 
 Use SculptUI's styles editor to change inline style attributes or select (or even create) style class names from sass, scss and less (modules) files and edit the styles there. See the results in your UI while the code is written for you.
 
+In the embedded property editor you see all the properties defined on the selected element. And you can edit them right there and watch your changes
+reflect in the browser and your code.
+
 ### More to come
 
-This is just the start. We are working hard on more features which you can look forward to:
+We are working hard on more features for you to look forward to:
 
 - Even more styling options (supporting [styled-components](https://styled-components.com/), [Material-UI styles](https://material-ui.com/styles/basics/), etc.)
 - Full WYSWYG component editing - like inserting and moving around components using drag-and-drop, extracting component parts to a new component
-- Generic and pluggable custom property editors for component libraries
-- Configurable integrated component galleries, style guides and design systems
+- Pluggable custom property editors for component libraries
+- Configurable integrated component galleries, style guides, and design systems
 - Support for other UI frameworks and libraries (i.e. [Angular](https://angular.io/), [Vue](https://vuejs.org/), Web Components and more)
+
+Stay tuned!
 
 ## Getting started
 
@@ -42,8 +51,10 @@ This is just the start. We are working hard on more features which you can look 
 - `Press the "Start SculptUI" button in the status bar`<br/>
   When you have a folder open containing a CRA or NextJs project just use the "Start SculptUI" button shown at the bottom in the status bar of VS Code. Your web application is compiled, dev server started and the browser opened running your app.
 
-- `Click element in the browser to jump to code line`<br/>
-  Now you can enjoy the magic, just click on any component in the browser to select the matching code right inside your VSCode editor.
+- `Click on an element in the browser`<br/>
+  Now you can enjoy the magic, just click on any component in the runtime web application in the browser to select it.
+  The matching code is focused right inside your VSCode editor. In the panels embedded next to your running app in the browser
+  you can now _sculpt_ the styles and properties of your element.
 
 ## Custom Setup
 

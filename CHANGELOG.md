@@ -1,5 +1,33 @@
 # Change Log
 
+## [0.6.1] - 2021-03-16
+
+Fixed images for Visual Studio marketplace.
+
+## [0.6.0] - 2021-03-16
+
+### Major new features
+
+- **Properties editor**: When selecting an element you can edit the properties in the browser. Changed properties are automatically saved to the source code.
+- Style attributes overview: A section with all currently set style attributes provides an improved overview. Append a new attribute easily there too.
+
+### Added
+
+- Style attributes are validated. A message shows when the entered value is not valid.
+- Improved formatting of classname property on adding or removing classnames (uses simple string, classnames() method or string literals where appropriate).
+- Ability to select className from suggestions.
+- Improved autosuggest for entering values of style attributes or properties.
+- Indicator shows when the runtime application is still loading.
+- Separate key (Ctrl) to temporarily toggle selection of elements in runtime app.-
+
+### Fixes
+
+- Fixed: Styles are shown even when element has no style property.
+- Fixed: Classnames are shown even when element has not classname property.
+- Fixed: Font size cannot be set to all possible values (i.e. smaller)
+- Fixed: Unnecessary console messages from Sculpt.
+- Various errors fixed that were caused by phases where the source code in the file system did not match the version in the runtime client.
+
 ## [0.5.0] - 2020-12-23
 
 ### Major new features
