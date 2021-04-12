@@ -1,5 +1,26 @@
 # Change Log
 
+## [0.6.2] - 2021-04-12
+
+### Added
+
+- Handle styling for css and scss files even when not imported in the module of selected element
+- Show documentation on property editors when available
+- Improved reloading in sculpt editor when changes in application code are made
+- Separate section for positioning properties in styles editor
+- CSS (scss, less) file is opened in VS Code when a classname is selected
+- Color picker shows colors already used on page as suggested palette
+- After creating a new file from the add new classname dialog this file is preselected
+- Improved validation of properties in styles and properties editor
+- Support for properties and styles editor even when no type information (type: any) is available
+
+### Fixed
+
+- Error when css is loaded from node modules
+- Errors when projects without tsconfig file are used
+- Some styling not changed when switching theme
+- Children attribute can be set even when already element content available
+
 ## [0.6.1] - 2021-03-16
 
 Fixed images for Visual Studio marketplace.
