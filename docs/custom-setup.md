@@ -78,14 +78,14 @@ In case you are using a [Custom Server](https://nextjs.org/docs/advanced-feature
 
   ```
 
-- Include Sculpt Babel Plugin in your .babelrc
+- Include Sculpt Babel Plugin in your .babelrc (_UPDATE: This step isn't required anymore in NextJS 9+._)
 
-  If you already have the [.babelrc](https://nextjs.org/docs/advanced-features/customizing-babel-config) file in your root folder just add "sculpt-ui/server/babel" to your plugins list. Otherwise create a <code>.babelrc</code> file in your root folder and add following content:
+  If you already have the [.babelrc](https://nextjs.org/docs/advanced-features/customizing-babel-config) file in your root folder just add "sculpt-ui/server/lib/babel" to your plugins list. Otherwise create a <code>.babelrc</code> file in your root folder and add following content:
 
   ```JSON
   {
     "presets": ["next/babel"],
-    "plugins": ["@sculpt-ui/server/babel"]
+    "plugins": ["@sculpt-ui/server/lib/babel"]
   }
   ```
 
