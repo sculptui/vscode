@@ -1,5 +1,24 @@
 # Change Log
 
+## [0.6.3] - 2021-05-06
+
+### Major new features
+
+- **Material-UI Styles**: The styles editor can now also be used to view and edit styling using [Material-UI Styles](https://material-ui.com/styles/basics/) with hook API and styled components API.
+
+### Added
+
+- Improved handling of loading at startup and after actions that require reloading.
+- More clear layout of header with class names, path and pseudo selectors in styles editor.
+- Shows info when selected class name is of an unsupported type.
+
+### Fixed
+
+- Hanging in blocked state if an error occurs on loading.
+- Scrollbar can not be used in the autocomplete inputs for (style) property values.
+- Clicking a link with ctrl key will open in a separate window and not inside Sculpt.
+- On adding a new class name the name can contain invalid characters which causes errors.
+
 ## [0.6.2] - 2021-04-12
 
 ### Added
