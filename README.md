@@ -26,7 +26,7 @@ Run your application and select any component during runtime in the browser. The
 <!-- TODO: Gif showing selection of element. -->
 <img src="images/SculptUI-vscode-demo.gif" width="100%" alt="SculptUI VS Code Demo">
 
-Use SculptUI's powerful styles editor to view and change style attributes defined in plain (s)css, (s)css modules or [Material-UI Styles](https://material-ui.com/styles/basics/). See the results in your UI while the code is written for you.
+Use SculptUI's powerful styles editor to view and change style attributes defined in plain (s)css, (s)css modules, [styled-components](https://styled-components.com/) or [Material-UI Styles](https://material-ui.com/styles/basics/). See the results in your UI while the code is written for you.
 
 In the embedded property editor you see all the properties defined on the selected element. And you can edit them right there and watch your changes
 reflect in the browser and your code.
@@ -35,10 +35,10 @@ reflect in the browser and your code.
 
 We are working hard on more features for you to look forward to:
 
-- Even more styling options (supporting [styled-components](https://styled-components.com/), etc.)
 - Full WYSWYG component editing - like inserting and moving around components using drag-and-drop, extracting component parts to a new component
-- Pluggable custom property editors for component libraries
 - Configurable integrated component galleries, style guides, and design systems
+- Even more styling options
+- Pluggable custom property editors for component libraries
 - Support for other UI frameworks and libraries (i.e. [Angular](https://angular.io/), [Vue](https://vuejs.org/), Web Components and more)
 
 Stay tuned!

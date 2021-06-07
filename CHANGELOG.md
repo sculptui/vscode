@@ -1,5 +1,41 @@
 # Change Log
 
+## [0.6.5] - 2021-06-07
+
+### Added
+
+- Preselect styles subtab depending on existing styles configured
+- Support Material-UI styles using only @material-ui/styles package, without requiring @material-ui/core package
+
+### Fixed
+
+- After installing dependency for styling (styled-components, @material-ui/styles) it is not reloaded unless VSCode is reloaded
+- Setting selector that contains dots (.) or other special characters causes error
+- Tooltips sometimes not showing
+- Errors when selecting Styled Component containing code structure not supported by Sculpt
+- Showing parts of the styles editor (class names, pseudo selectors, create styled component links, etc.) before style data actually loaded
+- Showing style module files multiple times in file selection when creating new class name
+- Removing last style property in Styled Component generates incorrect code and compile error
+
+## [0.6.4] - 2021-05-25
+
+### Major new features
+
+- **Styled Components**: The styles editor can now also be used to view and edit styling using [styled-components](https://styled-components.com/).
+
+### Added
+
+- New application bar with address (URL) of target application and commands
+- Improved separation of the different styling approaches using subtabs (Classnames, Styled Components and Inline)
+- Checks style packages (@materal-ui, styled-components) that are available
+- Prefill file or object to use in the "Add new class name" dialog after adding a new file or object
+- Improved transition when switching selected elements (less flashing)
+
+### Fixed
+
+- Fixed showing and reloading of styles editor when the data not yet fully loaded
+- Loss of selection of classname tag when an update occurs
+
 ## [0.6.3] - 2021-05-06
 
 ### Major new features
