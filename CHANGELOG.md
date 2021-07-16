@@ -1,5 +1,26 @@
 # Change Log
 
+## [0.7.0] - 2021-07-16
+
+### Major new features
+
+- **Drag & Drop elements**: Drag & drop an element during run-time to move inside the JSX tree of a component.
+
+### Added
+
+- Clicking the code edit icon now allows eplicitely selecting the relevant code in VSCode
+- When selecting code in VS Code from Sculpt, VS Code also receives the focus
+- Improved loading Sculpt first time (earlier loading of type information, better status indication)
+
+### Fixed
+
+- On creating same name file for css module compile error occurs
+- Color styles not correctly reloading in sculpt editor when changed in VSCode
+- After undoing changes using git receiving error "element not found" in sculpt
+- Fixed target URL appended to URL as query string parameter
+- On startup "Error loading the properties editor" appears sometimes
+- Showing properties as expressions even when actually value is string literal
+
 ## [0.6.5] - 2021-06-07
 
 ### Added
