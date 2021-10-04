@@ -1,5 +1,23 @@
 # Change Log
 
+## [0.7.1] - 2021-09-24
+
+### Major new features
+
+- **Undo last actions**: Revert your last actions with the new undo feature using Ctrl-Z or the undo command button.
+- **Component tree**: A new panel allows to display a tree of all components and elements on the page. Drag & drop from, to or inside the component tree to move elements.
+- **Embedded code editor**: Properties or style attributes can now be edited directly in Sculpt even when they contain expressions (code). Enjoy intellisense and validation of your code right in the browser, without needing to switch to VS Code.
+
+### Added
+
+- Major performance improvements: Sculpt is available almost immediately after loading and user only needs to wait when more detailed type information are parsed.
+- Display actual element tag name from code instead of the runtime component name.
+
+### Fixed
+
+- "Element not found" after reverting changes with git
+- Source maps are retrieved for Sculpt scripts
+
 ## [0.7.0] - 2021-07-16
 
 ### Major new features

@@ -38,7 +38,7 @@ Use SculptUI's powerful styles editor to view and change style attributes define
 
 Use drag & drop to visually move elements in your component's tree and let sculpt handle changing your JSX code.
 
-### View and edit properties in browser
+### View and edit properties in the browser
 
 In the embedded property editor you see all the properties defined on the selected element. And you can edit them right there and watch your changes reflect in the browser and your code.
 
@@ -73,7 +73,7 @@ If you are using custom scripts or a custom server with NextJs check out [Custom
 
 ## Status
 
-At the moment this is experimental and only React components are supported on projects based on [Create React App](https://create-react-app.dev/) (unejected or using [react-app-rewired](https://github.com/timarney/react-app-rewired) or [craco](https://github.com/gsoft-inc/craco/)) or [Next.js](https://nextjs.org/). But keep updated because we're fixing and extending fast. Please help us make this perfect for the way you work by sending us your feedbacks, issues and feature requests to our [issues list](https://github.com/sculptui/vscode/issues).
+At the moment this is still in preview and only React components are supported on projects based on [Create React App](https://create-react-app.dev/) (unejected or using [react-app-rewired](https://github.com/timarney/react-app-rewired) or [craco](https://github.com/gsoft-inc/craco/)) or [Next.js](https://nextjs.org/). But keep updated because we're fixing and extending fast. Please help us make this perfect for the way you work by sending us your feedbacks, issues and feature requests to our [issues list](https://github.com/sculptui/vscode/issues).
 
 ## Requirements
 
